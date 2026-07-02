@@ -1,0 +1,82 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          450.2919708029197,
+          160.8029197080292
+        ],
+        [
+          388.978102189781,
+          104.5985401459854
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          434.2335766423357,
+          176.13138686131387
+        ],
+        [
+          358.3211678832117,
+          94.37956204379562
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          284.5985401459854,
+          158.6131386861314
+        ],
+        [
+          245.1824817518248,
+          104.5985401459854
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          259.7810218978102,
+          167.37226277372264
+        ],
+        [
+          191.16788321167883,
+          108.24817518248175
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\fire_00542.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}

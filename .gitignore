@@ -1,0 +1,29 @@
+﻿# 排除压缩包
+*.zip
+
+# 排除模型参数文件
+*.pdiparams
+*.pdmodel
+*.pdopt
+
+# 排除数据集输出目录
+A_train_out/
+A_trainbu/
+analysis_result/
+
+# 排除大文件目录（原始数据集压缩包已解压的内容）
+firedetect_public/
+
+# Windows系统文件
+Thumbs.db
+Desktop.ini
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# IDE/编辑器
+.vscode/
+.idea/

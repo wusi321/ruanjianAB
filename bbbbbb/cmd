@@ -1,0 +1,11 @@
+conda activate trainA 
+python -m labelme  #启动标注
+
+  # 批量转换                                                                                                                                                                             
+  python json2voc.py "D:\你的LabelMe标注文件夹" "D:\ruanjiain\bbbbbb\annotations"                                                                                                        
+  
+
+
+  codex resume 019f06e3-19a7-7972-aa83-588f369fe62f
+
+  run codex resume 019f06e3-19a7-7972-aa83-588f369fe62f

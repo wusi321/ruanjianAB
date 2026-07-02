@@ -1,0 +1,82 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          329.1240875912409,
+          150.5839416058394
+        ],
+        [
+          286.05839416058393,
+          109.7080291970803
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          281.6788321167883,
+          148.3941605839416
+        ],
+        [
+          242.26277372262774,
+          108.24817518248175
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          203.57664233576642,
+          178.32116788321167
+        ],
+        [
+          111.60583941605842,
+          97.2992700729927
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          86.78832116788324,
+          165.18248175182484
+        ],
+        [
+          16.71532846715331,
+          100.94890510948905
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\frame_000314.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}

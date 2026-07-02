@@ -1,0 +1,67 @@
+## 2026线上初赛B榜数据集
+
+
+1. 概览
+| 项目 | 内容 |
+| :-: | :-: |
+名称	火焰检测公开数据集（firedetect_public）
+任务	目标检测（火焰定位）
+图像数	3030 张
+分辨率	640 × 480，RGB，JPEG
+类别数	2（fire、firebig）
+标注格式	Pascal VOC（XML，逐图多目标）
+标注框总数	8740（firebig 3030 + fire 5710）
+来源	利用端侧AR渲染引擎合成的增强现实室内火灾场景
+标注方式	渲染期自动生成（像素级，非人工框选）
+
+2. 目录结构
+firedetect_public/
+├── images/                 # 图像：fire_00001.jpg ... fire_03030.jpg
+│   └── fire_xxxxx.jpg      #   640×480 RGB JPEG
+└── annotations/            # 标注：与图像同名的 Pascal VOC XML
+    └── fire_xxxxx.xml      #   逐图多目标，含 fire / firebig
+
+图像与标注同名一一对应；文件名已随机重排，不含采集时间顺序信息。
+
+3. 类别定义
+| 类别 | 含义 | 每图数量 |
+| :-: | :-: | :-: |
+fire	画面中的普通火焰（除最大者以外的其它可见火）	0 个或多个
+firebig	画面中最主要（面积最大）的一处火焰	至多 1 个
+
+- 每张图都至少含 1 个 firebig（无可见火的帧已剔除，不在数据集中）。
+- 若画面只有一处火，则它即为 firebig，此时无 fire 框。
+- "最大"按火焰在画面中的可见像素面积判定（近大远小）。
+
+4. 标注格式（Pascal VOC）
+
+每张图一个 .xml，可含多个 <object>：
+```xml
+<annotation>
+  <folder>firedetect_public</folder>
+  <filename>fire_00001.jpg</filename>
+  <size><width>640</width><height>480</height><depth>3</depth></size>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>165</xmin><ymin>117</ymin><xmax>200</xmax><ymax>154</ymax></bndbox>
+  </object>
+  <object>
+    <name>firebig</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>334</xmin><ymin>107</ymin><xmax>634</xmax><ymax>357</ymax></bndbox>
+  </object>
+</annotation>
+```
+坐标为像素整数，bndbox 为 (xmin, ymin, xmax, ymax)，原点在图像左上角。
+框紧贴肉眼可见的燃烧亮核；被遮挡或不可见的火不标注。
+
+5. 数据特性与生成方式
+合成来源：由自研渲染引擎在三维室内场景中渲染增强现实火灾，沿设定路线做贴地穿越并自动截帧（背景为摄像头画面但未与空间计算模块联动）。
+可见性约束：仅"明亮且正在旺盛燃烧"的核心区域计入，确保框与真实可见火严格对齐；过弱/过小的火星被过滤。
+firebig 选取：取可见像素面积最大的火实例标为 firebig，其余为 fire。
+优点：框紧致、随距离自然缩放、自动处理遮挡与出画；无人工标注误差。 注意：为合成数据，风格与真实摄像头画面存在域差异（domain gap）。
+
+6. 竞赛评测的关系
+竞赛后台只考核 firebig（每图 1 个最大火框），指标为 F1（IoU > 0.5），并要求整体推理 FPS ≥ 20。
+公开集额外提供 fire 类，方便选手训练"检测所有火"的模型，再用后处理产出 firebig。

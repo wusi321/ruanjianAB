@@ -1,0 +1,35 @@
+<annotation>
+  <folder>firedetect_public</folder>
+  <filename>fire_03012.jpg</filename>
+  <size><width>640</width><height>480</height><depth>3</depth></size>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>255</xmin><ymin>117</ymin><xmax>272</xmax><ymax>134</ymax></bndbox>
+  </object>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>120</xmin><ymin>117</ymin><xmax>138</xmax><ymax>139</ymax></bndbox>
+  </object>
+  <object>
+    <name>firebig</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>79</xmin><ymin>115</ymin><xmax>108</xmax><ymax>148</ymax></bndbox>
+  </object>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>174</xmin><ymin>116</ymin><xmax>194</xmax><ymax>142</ymax></bndbox>
+  </object>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>196</xmin><ymin>117</ymin><xmax>210</xmax><ymax>134</ymax></bndbox>
+  </object>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>290</xmin><ymin>117</ymin><xmax>309</xmax><ymax>135</ymax></bndbox>
+  </object>
+</annotation>

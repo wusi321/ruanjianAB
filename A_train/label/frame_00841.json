@@ -1,0 +1,33 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "board",
+      "points": [
+        [
+          2.8057479858398438,
+          368.90244483947754
+        ],
+        [
+          635.3952026367188,
+          898.6874771118164
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "frame_00841.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "checked": false
+}

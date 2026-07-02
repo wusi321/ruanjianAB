@@ -1,0 +1,25 @@
+<annotation>
+	<folder>fire_detect</folder>
+	<filename>frame_001696.jpg</filename>
+	<path>/fire_detect/frame_001696.jpg</path>
+	<source>
+		<database>Unspecified</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>480</height>
+		<depth>3</depth>
+	</size>
+	<object>
+		<name>firebig</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>320</xmin>
+			<ymin>98</ymin>
+			<xmax>415</xmax>
+			<ymax>194</ymax>
+		</bndbox>
+	</object>
+</annotation>

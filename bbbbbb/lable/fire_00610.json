@@ -1,0 +1,100 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          553.2116788321167,
+          219.1970802919708
+        ],
+        [
+          638.6131386861314,
+          82.7007299270073
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          436.42335766423355,
+          175.4014598540146
+        ],
+        [
+          354.6715328467153,
+          96.56934306569343
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          242.992700729927,
+          157.8832116788321
+        ],
+        [
+          194.08759124087592,
+          108.97810218978101
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          151.75182481751824,
+          171.02189781021897
+        ],
+        [
+          83.86861313868616,
+          113.35766423357664
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          29.124087591240897,
+          167.37226277372264
+        ],
+        [
+          0.0,
+          100.10948905109484
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\fire_00610.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}

@@ -1,0 +1,118 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          575.1094890510949,
+          87.81021897810218
+        ],
+        [
+          640.0,
+          194.9889280734849
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          480.94890510948903,
+          175.4014598540146
+        ],
+        [
+          399.92700729927003,
+          98.02919708029196
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          288.24817518248176,
+          160.07299270072994
+        ],
+        [
+          233.50364963503648,
+          103.13868613138686
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          232.77372262773721,
+          189.27007299270073
+        ],
+        [
+          146.64233576642337,
+          97.2992700729927
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          141.53284671532847,
+          161.53284671532847
+        ],
+        [
+          78.029197080292,
+          103.86861313868613
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          43.722627737226304,
+          107.51824817518248
+        ],
+        [
+          0.0,
+          226.50113677156884
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\frame_000915.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}

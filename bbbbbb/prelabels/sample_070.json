@@ -1,0 +1,23 @@
+{
+  "version": "5.0.1",
+  "flags": {},
+  "imagePath": "sample_070.jpg",
+  "imageHeight": 480,
+  "imageWidth": 640,
+  "imageDepth": 3,
+  "shapes": [
+    {
+      "label": "firebig",
+      "points": [
+        [
+          14,
+          0
+        ],
+        [
+          487,
+          480
+        ]
+      ]
+    }
+  ]
+}

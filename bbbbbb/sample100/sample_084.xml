@@ -1,0 +1,10 @@
+<annotation>
+  <folder>captures</folder>
+  <filename>frame_003370.jpg</filename>
+  <size><width>640</width><height>480</height><depth>3</depth></size>
+  <object>
+    <name>firebig</name>
+    <pose>Unspecified</pose><truncated>0</truncated><difficult>0</difficult>
+    <bndbox><xmin>102</xmin><ymin>102</ymin><xmax>150</xmax><ymax>158</ymax></bndbox>
+  </object>
+</annotation>

@@ -1,0 +1,11 @@
+这是我整理好的资料
+firedetect_public文件夹下是数据集，
+创建好环境后将firedetect_public.zip上传，在服务器解压，
+然后将 “b榜赛题要求.txt”以及“b榜数据集相关.txt”和“readme.md”文件内容喂给GPT，
+让他给你转换成coco格式的脚本
+然后让ai给你写yml配置文件，记着用的是PaddleDetection2.5框架，ppyoloe系列模型
+为了防止你不会提交我还是给你准备好了提交格式的submission，到时候放进去模型，直接压缩上传即可
+submission是打包文件，导出后，将生成的三个文件放到submission/model文件夹下，
+我改好的引导脚本predict.py，这个能用，适配我写的readme文件，我给你的这份是我测试出成绩的，0.4几，
+你需要改的就是predict.py第21行的SCORE_THRESH参数，大概在0.05~0.3中间试验，最好参数就在这范围内
+然后压缩submission.zip上传测试即可

@@ -1,0 +1,47 @@
+1
+!python /home/aistudio/submission/predict.py data.txt result.json
+Total images: 126
+[Model] Loaded (inputs=['image', 'scale_factor'], outputs=['multiclass_nms3_0.tmp_0', 'multiclass_nms3_0.tmp_2'])
+Saved: result.json
+运行时长:13.703秒结束时间:2026-07-02 19:24:41
+[20]
+123
+#检测，将上部分fps写入
+#!python /home/aistudio/work/evaluate.py
+!python /home/aistudio/work/eval_firebig.py
+GT  images with firebig: 126
+Pred images with detections: 126
+============================================================
+Evaluation Results (IoU threshold = 0.5)
+============================================================
+  GT  images total           : 126
+  Pred images total          : 126
+  Common images (both sides) : 126
+  GT-only  (missed)          : 0
+  Pred-only (hallucinated)   : 0
+------------------------------------------------------------
+  TP  (correct)              : 114
+  FP  (wrong detection)      : 12
+  FN  (missed)               : 12
+------------------------------------------------------------
+  Precision                  : 0.9048
+  Recall                     : 0.9048
+  F1 Score                   : 0.9048
+============================================================
+
+FPS Estimation:
+  Competition test set has 4544 images, FPS >= 20 required.
+  FPS = 4544 / total_inference_seconds
+  Current val set: 126 images
+  Enter your total inference time on the val set (seconds)
+  to estimate the competition FPS.
+
+团队成员用户名	  score	    F1 Score	FPS     提交状态	提交时间
+半杯凉白开       0.09843	0.09843	    146.05	    已完成	2026-06-27 12:52
+半杯凉白开        0.48157	 0.48157	  33.13	    已完成	2026-06-27 14:39
+半杯凉白开       0.62393	0.62393	34.36	已完成	2026-06-30 17:38        SCORE_THRESH=0.25
+半杯凉白开        0.63171	0.63171	28.84	已完成	2026-06-30 20:57        SCORE_THRESH=0.28
+半杯凉白开       0.63214	0.63214	31.93	已完成	2026-07-01 23:          SCORE_THRESH=0.29
+半杯凉白开       0	      0	      11.98	已完成	2026-07-01 22:36         SCORE_THRESH=0.30
+半杯凉白开       0.4036	0.4036	26.99	已完成	2026-07-02 19:12   #l模型SCORE_THRESH=0.28
+

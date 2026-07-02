@@ -1,0 +1,117 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "fire",
+      "points": [
+        [
+          1525.6463039999999,
+          517.7793780000001
+        ],
+        [
+          1568.1648959999998,
+          570.912462
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "board",
+      "points": [
+        [
+          1420.1603519999999,
+          499.0194
+        ],
+        [
+          1527.5580479999999,
+          618.88212
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "battery",
+      "points": [
+        [
+          1844.853408,
+          479.71386
+        ],
+        [
+          1919.014752,
+          598.05918
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "score": null,
+      "difficult": false,
+      "attributes": {},
+      "kie_linking": [],
+      "label": "fire",
+      "points": [
+        [
+          1141.939488,
+          474.71238
+        ],
+        [
+          1221.611232,
+          591.12234
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "battery",
+      "points": [
+        [
+          887.1739130434784,
+          321.5217391304348
+        ],
+        [
+          1102.391304347826,
+          788.9130434782608
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "frame_00113.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "checked": false
+}

@@ -1,0 +1,28 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          566.3503649635036,
+          176.86131386861314
+        ],
+        [
+          473.6496350364963,
+          95.10948905109488
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\frame_001036.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}

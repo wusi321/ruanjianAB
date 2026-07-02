@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotation>
+  <folder>firedetect_public</folder>
+  <filename>fire_00088.jpg</filename>
+  <size>
+    <width>640</width>
+    <height>480</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>199</xmin>
+      <ymin>106</ymin>
+      <xmax>250</xmax>
+      <ymax>162</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>153</xmin>
+      <ymin>109</ymin>
+      <xmax>216</xmax>
+      <ymax>169</ymax>
+    </bndbox>
+  </object>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>0</xmin>
+      <ymin>102</ymin>
+      <xmax>107</xmax>
+      <ymax>342</ymax>
+    </bndbox>
+  </object>
+</annotation>

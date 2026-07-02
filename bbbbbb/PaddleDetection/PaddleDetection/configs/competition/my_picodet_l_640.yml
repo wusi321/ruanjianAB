@@ -1,0 +1,50 @@
+_BASE_: [
+  '../picodet/picodet_l_640_coco_lcnet.yml',
+]
+
+find_unused_parameters: True
+use_ema: true
+
+epoch: 200
+snapshot_epoch: 10
+save_interval: 10
+
+metric: COCO
+num_classes: 1
+
+worker_num: 8
+use_gpu: true
+
+save_dir: /home/aistudio/outputPicoDet
+
+TrainDataset:
+  !COCODataSet
+  image_dir: train/images
+  anno_path: annotations/train.json
+  dataset_dir: /home/aistudio/competition/dataset
+  data_fields:
+    - image
+    - gt_bbox
+    - gt_class
+  allow_empty: false
+
+EvalDataset:
+  !COCODataSet
+  image_dir: val/images
+  anno_path: annotations/val.json
+  dataset_dir: /home/aistudio/competition/dataset
+
+TestDataset:
+  !ImageFolder
+  anno_path: ""
+  dataset_dir: /home/aistudio/competition/dataset
+
+PicoHeadV2:
+  num_classes: 1
+  conv_feat:
+    name: PicoFeat
+    feat_in: 160
+    feat_out: 160
+    num_convs: 4
+    num_fpn_stride: 4
+    norm_type: bn

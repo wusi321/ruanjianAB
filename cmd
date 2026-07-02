@@ -1,0 +1,1 @@
+python -m labelme  #启动标注

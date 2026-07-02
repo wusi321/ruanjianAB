@@ -1,0 +1,46 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          99.92700729927009,
+          284.8905109489051
+        ],
+        [
+          0.0,
+          58.24447265418377
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    },
+    {
+      "label": "fire",
+      "points": [
+        [
+          150.2919708029197,
+          94.37956204379562
+        ],
+        [
+          236.42335766423358,
+          188.54014598540147
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\frame_000188.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}

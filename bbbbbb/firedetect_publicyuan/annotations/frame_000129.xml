@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotation>
+  <folder>firedetect_public</folder>
+  <filename>frame_000129.jpg</filename>
+  <size>
+    <width>640</width>
+    <height>480</height>
+    <depth>3</depth>
+  </size>
+  <object>
+    <name>fire</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox>
+      <xmin>349</xmin>
+      <ymin>39</ymin>
+      <xmax>638</xmax>
+      <ymax>421</ymax>
+    </bndbox>
+  </object>
+</annotation>

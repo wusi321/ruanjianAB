@@ -1,0 +1,121 @@
+B榜任务如下
+
+参赛选手需基于 PaddlePaddle 框架，训练并部署一个目标检测模型，对测试图片中最主要（面积最大）的一处火焰进行检测与定位：
+
+我采用的方案是全部识别为火焰fire，在后处理predict.py中只输出最大框
+
+| 类别编号 | 类别名称 | 描述 |
+| :-: | :-: | :-: |
+1	firebig	画面中最主要（面积最大）的一处火焰，每张图仅 1 个
+
+模型需在保证检测精度（F1 Score）的同时，满足实时推理的速度要求（FPS ≥ 20）。
+
+任务说明：火焰本身不存在"大火/小火"的外观差异，"最大"是相对画面的规则属性。
+
+二、提交格式
+选手须将推理代码及模型打包为 .zip 压缩文件上传，压缩包内部结构如下：
+```
+submission.zip
+├── predict.py                             （必须）推理入口脚本
+├── model/                                 （必须）模型文件目录，总大小 ≤ 200MB
+│   ├── infer_cfg.yml                      模型推理配置
+│   ├── model.pdmodel                      模型结构文件
+│   └── model.pdiparams                    模型权重文件
+└── PaddleDetection/                       （可选）使用官方部署代码时携带
+    └── deploy/python/
+        ├── preprocess.py
+        ├── utils.py
+        └── keypoint_preprocess.py
+```
+注意：若 predict.py 中未使用 PaddleDetection 官方部署代码（即自行实现预处理），可不携带 PaddleDetection/ 目录。
+
+三、推理框架要求
+模型必须使用 PaddlePaddle 框架训练并导出，评测环境已预装 paddlepaddle-gpu
+模型导出格式：model.pdmodel + model.pdiparams（Paddle Inference 静态图格式）
+推荐使用 PaddleDetection 官方目标检测套件，导出命令参考：
+```bash
+python tools/export_model.py \
+    -c configs/ppyoloe/ppyoloe_crn_s_300e_coco.yml \
+    --output_dir=./output_inference \
+    -o weights=best_model.pdparams
+```
+单类任务请将训练配置中的类别数设为 1、类别名设为 firebig（infer_cfg.yml 的 label_list 仅含 firebig）。
+
+四、推理脚本规范
+科普：后台评测系统将以如下命令调用选手的推理脚本：
+```bash
+python predict.py <data_txt> <result_json>
+```
+data_txt：测试图片路径列表文件（每行一条路径，如 test/Image/frame_00000.jpg）
+result_json：选手脚本必须将检测结果输出至该路径
+predict.py 须满足以下要求：
+
+从 sys.argv[1] 读取图片路径列表，从 sys.argv[2] 获取输出路径
+推理完成后，将结果以 JSON 格式写入 sys.argv[2]
+脚本正常退出，返回码为 0
+对每张图只输出 1 个（面积/置信度最大的）firebig 框
+五、输出文件格式
+result.json 须严格遵循以下格式，缺少任意字段将导致评测失败：
+```json
+{
+  "result": [
+    {
+      "image_id":    "frame_00000",
+      "type":        1,
+      "x":           120.5,
+      "y":           45.0,
+      "width":       200.0,
+      "height":      180.0,
+      "segmentation": []
+    }
+  ]
+}
+```
+| 字段 | 类型 | 要求 |
+| :-: | :-: | :-: |
+image_id	string	图片文件名，不含扩展名（如 "frame_00000"）
+type	int	类别编号，1-indexed 整数（本赛单类，恒为 1=firebig）
+x	float	检测框左上角横坐标（像素）
+y	float	检测框左上角纵坐标（像素）
+width	float	检测框宽度（像素）
+height	float	检测框高度（像素）
+segmentation	list	本赛题无需分割，填空列表 [] 即可
+
+- 若某张图片无检测目标，无需在 result 中为其添加条目
+- result 数组可为空（[]），表示对所有图片均无检测结果
+六、评测指标
+综合得分 = 各类别 F1 Score 的均值（满分 1.0）。本赛为单类，综合得分即 firebig 的 F1：
+```
+score = \frac{1}{C}\sum_{c=1}^{C} F1_c = F1_{\text{firebig}}
+
+F1_c = \frac{2 \cdot P_c \cdot R_c}{P_c + R_c} \quad (C=1)
+```
+总分 score：
+score = (1/C) * Σ(c=1 to C) F1_c = F1_firebig
+单类 F1：
+F1_c = (2 * P_c * R_c) / (P_c + R_c) (C=1)
+
+- IoU 匹配阈值：0.5（预测框与真实框 IoU ≥ 0.5 才算命中）
+- 匹配方式：同类预测框按 IoU 降序与真实框做一对一贪心匹配，命中计 TP，否则计 FP
+- FPS 门槛：FPS ≥ 20，否则综合得分强制为 0
+- FPS 计算：
+FPS=4544/推理总耗时（秒）（4544 为测试集图片数）
+
+
+七、限制条件
+
+| 项目 | 要求 |
+| :-: | :-: |
+提交文件格式	.zip
+推理框架	PaddlePaddle（不接受其他框架）
+模型导出格式	Paddle Inference 静态图（.pdmodel + .pdiparams）
+model/ 目录大小	≤ 200 MB
+推理速度	FPS ≥ 20（在评测服务器 GPU 环境下）
+类别	单类 firebig，每图输出 1 个框
+
+八、参考提交模板
+组委会提供参考模板供选手下载使用，包含完整的目录结构、predict.py 参考实现及 infer_cfg.yml 示例配置。
+
+选手下载后，将自己训练导出的 model.pdmodel 和 model.pdiparams 放入 model/ 目录，按需修改 predict.py 及 infer_cfg.yml，整体打包为 .zip 即可提交。
+
+模板下载：通过网盘分享的文件：submission_template_firedetect.zip 链接: https://pan.baidu.com/s/1lcZBqCA3KD_bFNAGUFE98Q?pwd=u642 提取码: u642 复制这段内容后打开百度网盘手机App，操作更方便哦 –来自百度网盘超级会员v7的分享

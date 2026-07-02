@@ -1,0 +1,130 @@
+_BASE_:
+  - "../ppyoloe/ppyoloe_plus_crn_l_80e_coco.yml"
+
+find_unused_parameters: False
+
+log_iter: 20
+snapshot_epoch: 10
+save_interval: 10
+
+metric: COCO
+num_classes: 1
+
+epoch: 60
+worker_num: 8
+use_gpu: true
+
+save_dir: /home/aistudio/outputL3
+
+weights: https://bj.bcebos.com/v1/paddledet/models/pretrained/ppyoloe_plus_crn_l_obj365_pretrained.pdparams
+
+use_ema: true
+
+PPYOLOEHead:
+  num_classes: 1
+  static_assigner_epoch: 20
+
+TrainDataset:
+  !COCODataSet
+  image_dir: train/images
+  anno_path: annotations/train.json
+  dataset_dir: /home/aistudio/competition/dataset
+  data_fields:
+    - image
+    - gt_bbox
+    - gt_class
+  allow_empty: false
+
+EvalDataset:
+  !COCODataSet
+  image_dir: val/images
+  anno_path: annotations/val.json
+  dataset_dir: /home/aistudio/competition/dataset
+
+TestDataset:
+  !ImageFolder
+  anno_path: ""
+  dataset_dir: /home/aistudio/competition/dataset
+
+LearningRate:
+  base_lr: 0.001
+  schedulers:
+    - !CosineDecay
+      max_epochs: 60
+    - !LinearWarmup
+      start_factor: 0.0
+      epochs: 3
+
+OptimizerBuilder:
+  clip_grad_by_norm: 35.
+
+TrainReader:
+  batch_size: 8
+  shuffle: true
+  drop_last: true
+  use_shared_memory: true
+
+  sample_transforms:
+    - Decode: {}
+
+    - RandomDistort: {}
+
+    - RandomExpand:
+        fill_value: [123.675, 116.28, 103.53]
+
+    - RandomCrop: {}
+
+    - RandomFlip:
+        prob: 0.5
+
+    - Resize:
+        target_size: [640, 640]
+        keep_ratio: false
+        interp: 2
+
+    - NormalizeImage:
+        is_scale: true
+        mean: [0.485, 0.456, 0.406]
+        std: [0.229, 0.224, 0.225]
+
+    - Permute: {}
+
+  batch_transforms:
+    - PadGT:
+        return_gt_mask: true
+
+EvalReader:
+  batch_size: 4
+
+  sample_transforms:
+    - Decode: {}
+
+    - Resize:
+        target_size: [640, 640]
+        keep_ratio: false
+        interp: 2
+
+    - NormalizeImage:
+        is_scale: true
+        mean: [0.485, 0.456, 0.406]
+        std: [0.229, 0.224, 0.225]
+
+    - Permute: {}
+
+TestReader:
+  batch_size: 4
+
+  sample_transforms:
+    - Decode: {}
+
+    - Resize:
+        target_size: [640, 640]
+        keep_ratio: false
+        interp: 2
+
+    - NormalizeImage:
+        is_scale: true
+        mean: [0.485, 0.456, 0.406]
+        std: [0.229, 0.224, 0.225]
+
+    - Permute: {}

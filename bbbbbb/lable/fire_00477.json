@@ -1,0 +1,28 @@
+{
+  "version": "6.3.1.dev21+g30bbf9c60",
+  "flags": {},
+  "shapes": [
+    {
+      "label": "fire",
+      "points": [
+        [
+          118.90510948905111,
+          373.94160583941607
+        ],
+        [
+          0.6569343065693678,
+          50.58394160583942
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "shape_type": "rectangle",
+      "flags": {},
+      "mask": null
+    }
+  ],
+  "imagePath": "..\\captures\\fire_00477.jpg",
+  "imageData": null,
+  "imageHeight": 480,
+  "imageWidth": 640
+}
