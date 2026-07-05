@@ -1,0 +1,8 @@
+GPU enabled
+Total images: 1
+Progress: 0/1
+
+Saved: result.json
+Total detections: 5
+Total time: 8.18 s
+{"result": [{"image_id": "frame_01447", "type": 2, "x": 585.86, "y": 662.94, "width": 99.08, "height": 70.41, "segmentation": []}, {"image_id": "frame_01447", "type": 1, "x": 585.86, "y": 662.94, "width": 99.08, "height": 70.41, "segmentation": []}, {"image_id": "frame_01447", "type": 2, "x": 354.87, "y": 707.13, "width": 210.89, "height": 50.88, "segmentation": []}, {"image_id": "frame_01447", "type": 2, "x": 1204.97, "y": 609.19, "width": 711.72, "height": 474.79, "segmentation": []}, {"image_id": "frame_01447", "type": 2, "x": 1294.97, "y": 639.27, "width": 30.29, "height": 18.79, "segmentation": []}]}

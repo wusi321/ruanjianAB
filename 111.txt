@@ -1,0 +1,66 @@
+Warning: import ppdet from source directory without installing, run 'python setup.py install' to install ppdet firstly
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+[05/26 00:08:53] ppdet.utils.checkpoint INFO: Finish resuming model weights: /home/aistudio/output526/my_ppyoloe/69.pdparams
+[05/26 00:08:58] ppdet.engine INFO: Epoch: [70] [ 0/29] learning_rate: 0.000017 loss: 0.566824 loss_cls: 0.267546 loss_iou: 0.015874 loss_dfl: 0.519188 loss_l1: 0.033895 eta: 0:25:30 batch_cost: 5.2764 data_cost: 0.0004 ips: 1.5162 images/s
+[05/26 00:09:23] ppdet.engine INFO: Epoch: [70] [20/29] learning_rate: 0.000015 loss: 0.584297 loss_cls: 0.273388 loss_iou: 0.018687 loss_dfl: 0.519851 loss_l1: 0.052665 eta: 0:05:33 batch_cost: 1.0324 data_cost: 0.0050 ips: 7.7492 images/s
+[05/26 00:09:35] ppdet.engine INFO: Epoch: [71] [ 0/29] learning_rate: 0.000014 loss: 0.588274 loss_cls: 0.276474 loss_iou: 0.018382 loss_dfl: 0.520541 loss_l1: 0.054308 eta: 0:05:23 batch_cost: 1.1877 data_cost: 0.2579 ips: 6.7359 images/s
+[05/26 00:10:02] ppdet.engine INFO: Epoch: [71] [20/29] learning_rate: 0.000012 loss: 0.586351 loss_cls: 0.277160 loss_iou: 0.019976 loss_dfl: 0.524387 loss_l1: 0.055545 eta: 0:04:47 batch_cost: 1.1258 data_cost: 0.0003 ips: 7.1057 images/s
+[05/26 00:10:14] ppdet.engine INFO: Epoch: [72] [ 0/29] learning_rate: 0.000011 loss: 0.583776 loss_cls: 0.277160 loss_iou: 0.019759 loss_dfl: 0.523313 loss_l1: 0.044848 eta: 0:04:39 batch_cost: 1.1616 data_cost: 0.2358 ips: 6.8868 images/s
+[05/26 00:10:40] ppdet.engine INFO: Epoch: [72] [20/29] learning_rate: 0.000009 loss: 0.578170 loss_cls: 0.274355 loss_iou: 0.018806 loss_dfl: 0.524680 loss_l1: 0.045507 eta: 0:04:05 batch_cost: 1.0337 data_cost: 0.0003 ips: 7.7389 images/s
+[05/26 00:10:52] ppdet.engine INFO: Epoch: [73] [ 0/29] learning_rate: 0.000009 loss: 0.586191 loss_cls: 0.273934 loss_iou: 0.019747 loss_dfl: 0.525246 loss_l1: 0.050094 eta: 0:03:56 batch_cost: 1.1436 data_cost: 0.2343 ips: 6.9957 images/s
+[05/26 00:11:19] ppdet.engine INFO: Epoch: [73] [20/29] learning_rate: 0.000007 loss: 0.578258 loss_cls: 0.264982 loss_iou: 0.018755 loss_dfl: 0.525651 loss_l1: 0.048081 eta: 0:03:31 batch_cost: 1.1192 data_cost: 0.0003 ips: 7.1477 images/s
+[05/26 00:11:31] ppdet.engine INFO: Epoch: [74] [ 0/29] learning_rate: 0.000006 loss: 0.577449 loss_cls: 0.268145 loss_iou: 0.019777 loss_dfl: 0.525728 loss_l1: 0.047192 eta: 0:03:22 batch_cost: 1.1355 data_cost: 0.2405 ips: 7.0452 images/s
+[05/26 00:11:59] ppdet.engine INFO: Epoch: [74] [20/29] learning_rate: 0.000005 loss: 0.574715 loss_cls: 0.271550 loss_iou: 0.018607 loss_dfl: 0.517895 loss_l1: 0.048369 eta: 0:02:59 batch_cost: 1.1759 data_cost: 0.0040 ips: 6.8031 images/s
+[05/26 00:12:12] ppdet.engine INFO: Epoch: [75] [ 0/29] learning_rate: 0.000004 loss: 0.580790 loss_cls: 0.268613 loss_iou: 0.018640 loss_dfl: 0.526676 loss_l1: 0.048369 eta: 0:02:49 batch_cost: 1.2608 data_cost: 0.2586 ips: 6.3450 images/s
+[05/26 00:12:38] ppdet.engine INFO: Epoch: [75] [20/29] learning_rate: 0.000003 loss: 0.580333 loss_cls: 0.270451 loss_iou: 0.019876 loss_dfl: 0.519378 loss_l1: 0.056502 eta: 0:02:25 batch_cost: 1.1461 data_cost: 0.0003 ips: 6.9804 images/s
+[05/26 00:12:50] ppdet.engine INFO: Epoch: [76] [ 0/29] learning_rate: 0.000003 loss: 0.568071 loss_cls: 0.263401 loss_iou: 0.018578 loss_dfl: 0.522468 loss_l1: 0.050435 eta: 0:02:15 batch_cost: 1.1636 data_cost: 0.2128 ips: 6.8754 images/s
+[05/26 00:13:17] ppdet.engine INFO: Epoch: [76] [20/29] learning_rate: 0.000002 loss: 0.576412 loss_cls: 0.271298 loss_iou: 0.018397 loss_dfl: 0.519909 loss_l1: 0.051809 eta: 0:01:51 batch_cost: 1.1219 data_cost: 0.0061 ips: 7.1309 images/s
+[05/26 00:13:29] ppdet.engine INFO: Epoch: [77] [ 0/29] learning_rate: 0.000002 loss: 0.566601 loss_cls: 0.259866 loss_iou: 0.016880 loss_dfl: 0.514008 loss_l1: 0.043602 eta: 0:01:41 batch_cost: 1.2002 data_cost: 0.2265 ips: 6.6657 images/s
+[05/26 00:13:56] ppdet.engine INFO: Epoch: [77] [20/29] learning_rate: 0.000001 loss: 0.579188 loss_cls: 0.272868 loss_iou: 0.018730 loss_dfl: 0.518312 loss_l1: 0.046268 eta: 0:01:18 batch_cost: 1.1436 data_cost: 0.0003 ips: 6.9954 images/s
+[05/26 00:14:08] ppdet.engine INFO: Epoch: [78] [ 0/29] learning_rate: 0.000001 loss: 0.584668 loss_cls: 0.271252 loss_iou: 0.019278 loss_dfl: 0.525009 loss_l1: 0.050653 eta: 0:01:07 batch_cost: 1.1770 data_cost: 0.2342 ips: 6.7968 images/s
+[05/26 00:14:35] ppdet.engine INFO: Epoch: [78] [20/29] learning_rate: 0.000000 loss: 0.573167 loss_cls: 0.271038 loss_iou: 0.018549 loss_dfl: 0.520172 loss_l1: 0.047119 eta: 0:00:44 batch_cost: 1.1841 data_cost: 0.0877 ips: 6.7561 images/s
+[05/26 00:14:47] ppdet.engine INFO: Epoch: [79] [ 0/29] learning_rate: 0.000000 loss: 0.573167 loss_cls: 0.276168 loss_iou: 0.018050 loss_dfl: 0.522101 loss_l1: 0.045848 eta: 0:00:33 batch_cost: 1.1287 data_cost: 0.2119 ips: 7.0880 images/s
+[05/26 00:15:14] ppdet.engine INFO: Epoch: [79] [20/29] learning_rate: 0.000000 loss: 0.577696 loss_cls: 0.267465 loss_iou: 0.018744 loss_dfl: 0.517634 loss_l1: 0.047358 eta: 0:00:10 batch_cost: 1.1432 data_cost: 0.0002 ips: 6.9982 images/s
+[05/26 00:15:29] ppdet.utils.checkpoint INFO: Save checkpoint: /home/aistudio/output526/my_ppyoloe
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+[05/26 00:15:32] ppdet.engine INFO: Eval iter: 0
+[05/26 00:15:36] ppdet.metrics.metrics INFO: The bbox result is saved to bbox.json.
+loading annotations into memory...
+Done (t=0.00s)
+creating index...
+index created!
+[05/26 00:15:36] ppdet.metrics.coco_utils INFO: Start evaluate...
+Loading and preparing results...
+DONE (t=0.57s)
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=0.65s).
+Accumulating evaluation results...
+DONE (t=0.13s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.747
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.905
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.866
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.628
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.807
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.566
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.838
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.838
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.000
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.744
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.886
+[05/26 00:15:37] ppdet.engine INFO: Total sample number: 52, averge FPS: 9.616209197794209
+[05/26 00:15:37] ppdet.engine INFO: Best test bbox ap is 0.747.
+[05/26 00:15:40] ppdet.utils.checkpoint INFO: Save checkpoint: /home/aistudio/output526/my_ppyoloe
